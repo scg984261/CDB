@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CDB/v17
+/bin/Debug
+/obj/Debug
+/CDB.dbmdl
+/CDB.jfm
