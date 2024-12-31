@@ -4,6 +4,9 @@
 	                                       CONSTRAINT CustomerIdNotNull                      NOT NULL,
 	FirstName          NVARCHAR(256)       CONSTRAINT CustomerFirstNameNotNull               NOT NULL,
 	LastName           NVARCHAR(256)       CONSTRAINT CustomerLastNameNotNull                NOT NULL,
+	CompanyName        NVARCHAR(256)       CONSTRAINT CompanyNameNotNull                     NOT NULL,
+	EmailAddress       NVARCHAR(128)       CONSTRAINT CompanyEmailAddressNotNull             NOT NULL,
+	ContactNumber      NVARCHAR(32)        CONSTRAINT CompanyContactNumberNotNull            NOT NULL,
 	CreatedDateTime    DATETIME            CONSTRAINT CustomerCreatedDateTimeNotNull         NOT NULL
 	                                       CONSTRAINT CustomerCreatedDateTimeDefaultValue    DEFAULT CURRENT_TIMESTAMP,
 	LastUpdateDateTime DATETIME            CONSTRAINT CustomerLastUpdateDateTimeNotNull      NOT NULL

@@ -4,7 +4,7 @@
 )
 AS
 BEGIN;
-	SELECT Id, FirstName, LastName, CreatedDateTime, LastUpdateDateTime
+	SELECT Id, FirstName, LastName, EmailAddress, ContactNumber, CreatedDateTime, LastUpdateDateTime
 	FROM dbo.Customer
 	WHERE Id = @CustomerId;
 END;
