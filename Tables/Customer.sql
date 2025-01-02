@@ -2,11 +2,12 @@
 (
     Id                 INT IDENTITY (1, 1) CONSTRAINT CustomerIdPrimaryKey                   PRIMARY KEY
 	                                       CONSTRAINT CustomerIdNotNull                      NOT NULL,
-	FirstName          NVARCHAR(256)       CONSTRAINT CustomerFirstNameNotNull               NOT NULL,
-	LastName           NVARCHAR(256)       CONSTRAINT CustomerLastNameNotNull                NOT NULL,
 	CompanyName        NVARCHAR(256)       CONSTRAINT CompanyNameNotNull                     NOT NULL,
-	EmailAddress       NVARCHAR(128)       CONSTRAINT CompanyEmailAddressNotNull             NOT NULL,
-	ContactNumber      NVARCHAR(32)        CONSTRAINT CompanyContactNumberNotNull            NOT NULL,
+	BusinessContact    NVARCHAR(256),
+	EmailAddress       NVARCHAR(128),
+	ContactNumber      NVARCHAR(32),
+	IsActive           BIT                 CONSTRAINT CompanyIsActiveNotNull                 NOT NULL
+	                                       CONSTRAINT CompanyIsActiveDefaultValue            DEFAULT 1,
 	CreatedDateTime    DATETIME            CONSTRAINT CustomerCreatedDateTimeNotNull         NOT NULL
 	                                       CONSTRAINT CustomerCreatedDateTimeDefaultValue    DEFAULT CURRENT_TIMESTAMP,
 	LastUpdateDateTime DATETIME            CONSTRAINT CustomerLastUpdateDateTimeNotNull      NOT NULL

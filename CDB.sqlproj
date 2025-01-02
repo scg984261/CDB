@@ -66,6 +66,14 @@
     <Build Include="StoredProcedures\SelectCustomerById.sql" />
     <Build Include="StoredProcedures\InsertCustomer.sql" />
     <Build Include="StoredProcedures\SelectAllCustomers.sql" />
+    <Build Include="Tables\Service.sql" />
+    <Build Include="Tables\Subscription.sql" />
+    <Build Include="StoredProcedures\InsertService.sql" />
+    <Build Include="StoredProcedures\SelectServiceById.sql" />
+    <Build Include="StoredProcedures\InsertSubscription.sql" />
+    <Build Include="StoredProcedures\SelectSubscriptionById.sql" />
+    <Build Include="StoredProcedures\UpdateServicePrice.sql" />
+    <Build Include="StoredProcedures\SelectSubscriptionsForCustomer.sql" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition="'$(Configuration)'=='Release'">
     <Exec WorkingDirectory="bin\Release" Command="del *.dacpac" />
