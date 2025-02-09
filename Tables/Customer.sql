@@ -2,6 +2,7 @@
 (
     Id                 INT IDENTITY (1, 1) CONSTRAINT CustomerIdPrimaryKey                   PRIMARY KEY
 	                                       CONSTRAINT CustomerIdNotNull                      NOT NULL,
+	SageRef            NVARCHAR(32),
 	CompanyName        NVARCHAR(256)       CONSTRAINT CompanyNameNotNull                     NOT NULL,
 	BusinessContact    NVARCHAR(256),
 	EmailAddress       NVARCHAR(128),
