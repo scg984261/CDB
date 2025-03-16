@@ -16,4 +16,6 @@ BEGIN;
 	ContactNumber = @ContactNumber,
 	IsActive = @IsActive
 	WHERE Id = @CustomerId;
+
+	EXEC dbo.SelectCustomerById @CustomerId = @CustomerId;
 END;
