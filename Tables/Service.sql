@@ -4,6 +4,8 @@
 	                                      CONSTRAINT ServiceIdNotNull                      NOT NULL,
 	Name               NVARCHAR(256)      CONSTRAINT ServiceNameNotNull                    NOT NULL,
 	Price              MONEY              CONSTRAINT ServicePriceNotNull                   NOT NULL,
+	IsRecurring        BIT                CONSTRAINT ServiceIsRecurringNotNull             NOT NULL
+	                                      CONSTRAINT ServiceIsRecurringDefaultValue        DEFAULT 1,
 	CreatedDateTime    DATETIME           CONSTRAINT ServiceCreatedDateTimeNotNull         NOT NULL
 	                                      CONSTRAINT ServiceCreatedDateTimeDefaultValue    DEFAULT CURRENT_TIMESTAMP,
 	LastUpdateDateTime DATETIME           CONSTRAINT ServiceLastUpdateDateTimeNotNull      NOT NULL
