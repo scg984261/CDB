@@ -1,14 +1,15 @@
 ﻿CREATE PROCEDURE dbo.InsertService
 (
 	@Name  VARCHAR(256),
-	@Price MONEY
+	@Price MONEY,
+	@IsRecurring BIT
 )
 AS
 BEGIN;
 	INSERT INTO dbo.Service
-	(Name, Price)
+	(Name, Price, IsRecurring)
 	VALUES
-	(@Name, @Price);
+	(@Name, @Price, @IsRecurring);
 
 	DECLARE @NewlyInsertedServiceId INT = SCOPE_IDENTITY();
 

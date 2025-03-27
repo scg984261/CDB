@@ -4,7 +4,7 @@
 )
 AS
 BEGIN;
-	SELECT Id, Name, Price, CreatedDateTime, LastUpdateDateTime
+	SELECT Id, Name, Price, IsRecurring, CreatedDateTime, LastUpdateDateTime
 	FROM dbo.Service
 	WHERE Id = @ServiceId;
 END;

@@ -4,7 +4,7 @@
 )
 AS
 BEGIN;
-	SELECT sub.Id AS 'SubscriptionId', sub.CustomerId, sub.ServiceId, cust.CompanyName, cust.BusinessContact, serv.Name, serv.Price
+	SELECT sub.Id AS 'SubscriptionId', sub.CustomerId, sub.ServiceId, cust.CompanyName, cust.BusinessContact, serv.Name, serv.Price, serv.IsRecurring
 	FROM Subscription sub
 	JOIN Customer cust
 	ON cust.Id = sub.CustomerId
