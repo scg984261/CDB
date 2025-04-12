@@ -1,12 +1,9 @@
-﻿CREATE PROCEDURE dbo.SelectServiceById
-(
-	@ServiceId INT
-)
+﻿CREATE PROCEDURE dbo.SelectAllServices
 AS
 BEGIN;
 	SELECT Id, Name, Price, IsRecurring, CreatedDateTime, LastUpdateDateTime
 	FROM dbo.Service
-	WHERE Id = @ServiceId;
+	ORDER BY CreatedDateTime DESC;
 END;
 
 GO

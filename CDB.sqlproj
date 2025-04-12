@@ -77,6 +77,7 @@
     <Build Include="StoredProcedures\DeactivateCustomer.sql" />
     <Build Include="StoredProcedures\ActivateCustomer.sql" />
     <Build Include="StoredProcedures\UpdateCustomer.sql" />
+    <Build Include="StoredProcedures\SelectAllServices.sql" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition="'$(Configuration)'=='Release'">
     <Exec WorkingDirectory="bin\Release" Command="del *.dacpac" />
