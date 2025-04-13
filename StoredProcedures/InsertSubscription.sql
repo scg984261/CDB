@@ -10,9 +10,7 @@ BEGIN;
 	VALUES
 	(@CustomerId, @ServiceId);
 
-	DECLARE @NewlyInsertedSubscriptionId INT = SCOPE_IDENTITY();
-
-	EXEC dbo.SelectSubscriptionById @SubscriptionId = @NewlyInsertedSubscriptionId
+	EXEC dbo.SelectSubscriptionById @CustomerId=@CustomerId, @ServiceId=@ServiceId;
 END;
 
 GO
